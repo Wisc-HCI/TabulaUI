@@ -1,0 +1,8 @@
+{"aos": [
+	{"name": "groceries", "categories": ["grabbable","location"], "entity_class":"item","proper":false, "possessive":false, "sprite": "object_icons/groceries"},
+	{"name": "person", "categories":["person","location"],"entity_class":"Person","proper":false, "possessive":true, "sprite": "object_icons/person"},
+	{"name": "countertop", "categories":["location", "container", "wipeable"],"entity_class":"furniture","proper":false, "possessive":false, "sprite": "object_icons/countertop"},
+	{"name": "cabinets", "categories":["location", "container"],"entity_class":"furniture","proper":false, "possessive":false, "sprite": "object_icons/cabinet"},
+	{"name": "toy", "categories":["grabbable","location"],"entity_class":"item","proper":false, "possessive":false, "sprite": "object_icons/teddy_bear"},
+	{"name": "chest", "categories":["location", "container"],"entity_class":"furniture","proper":false, "possessive":false, "sprite": "object_icons/chest"}
+]}

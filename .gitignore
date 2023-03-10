@@ -1,0 +1,13 @@
+Library/
+Logs/
+Temp/
+UserSettings/
+
+pass.txt
+
+Assets/Scripts/.vs/Scripts/v16/.suo
+Assets/Scripts/.vs/VSWorkspaceState.json
+Assets/Scripts/.vs/slnx.sqlite
+
+*.psd
+*.psd.meta
