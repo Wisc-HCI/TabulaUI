@@ -1,5 +1,5 @@
-# TraceryMobileUI
-A mobile UI for Tabula (formerly called Tracery).
+# TabulaUI
+A mobile UI for Tabula.
 
 ### Description
 
@@ -10,10 +10,10 @@ It was developed for a Samsung Galaxy S8 tablet using Unity Editor version 2020.
 ### Setting Up
 Note that the setup steps may require you to enter the Unity Editor in safe mode while you configure the ROS TCP Connector.
 1. Clone this project
-2. Clone Unity's [`ROS TCP Connector`](https://github.com/Unity-Technologies/ROS-TCP-Connector) to the TraceryMobileUI > Packages folder.
+2. Clone Unity's [`ROS TCP Connector`](https://github.com/Unity-Technologies/ROS-TCP-Connector) to the TabulaUI > Packages folder.
 3. Find the Window tab on the top > Package Manager and [install the ROS TCP Connector package from disk](https://docs.unity3d.com/Manual/upm-ui-local.html).
-4. Go to TraceryMobileUI > Packages > manifest.json and change the following line: 
-      > "com.unity.robotics.ros-tcp-connector": "file:**[your local TraceryMobileUI Path]**/TraceryMobileUI/Packages/ROS-TCP-Connector/com.unity.robotics.ros-tcp-connector",
+4. Go to TabulaUI > Packages > manifest.json and change the following line: 
+      > "com.unity.robotics.ros-tcp-connector": "file:**[your local TabulaUI Path]**/TabulaUI/Packages/ROS-TCP-Connector/com.unity.robotics.ros-tcp-connector",
 
 Once you open the project in Unity, there is one additional setup step. In the Project window, click on the `Resources/RosConnectionPrefab` file. You will need to set the `Ros IP Address` field to your own IP address --> This should be the ROS master IP!!!
 
