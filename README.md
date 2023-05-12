@@ -8,6 +8,7 @@ This UI is a robot programming tablet that works with the TabulaSynthesizer back
 It was developed for a Samsung Galaxy S8 tablet using Unity Editor version 2020.3.21f1. This system uses speech input, which works best on the Android tablet but may also work from Windows (but is not supported with Unity on Linux). Further, building for the tablet is most accessible through Windows. To test on an S8 tablet, ensure that the Android Build support was installed with your Unity Editor (version 2020.3.21f1). You will need to change the BuildSettings to Android.
 
 Note, if you are on a Mac, I have had success guided by this blog post: https://medium.com/@surathchatterji/unity3d-devs-setting-up-your-mac-for-android-builds-6fb937aec31c
+Also from Mac, we had to implement this fix: https://answers.unity.com/questions/1644585/native-error-access-denied-when-building-the-proje.html
 
 ### Setting Up
 Note that the setup steps may require you to enter the Unity Editor in safe mode while you configure the ROS TCP Connector.
