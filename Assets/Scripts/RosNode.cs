@@ -127,13 +127,13 @@ public class RosNode : MonoBehaviour
 		// accessing and updating the map
 		backgroundMapDrawer = GameObject.Find("BackgroundMap").GetComponent<BackgroundMapDrawer>();
 
-        // debug testing for displaying recordings
-        //string jsontest = "{\"world\": {\"regions\": [{\"name\": \"garage\", \"objects\": []}, {\"name\": \"living room\", \"objects\": []}, {\"name\": \"kitchen\", \"objects\": []}, {\"name\": \"hallway\", \"objects\": []}, {\"name\": \"office\", \"objects\": []}, {\"name\": \"bathroom\", \"objects\": []}, {\"name\": \"bedroom\", \"objects\": []}]}, \"program\": {\"recordings\": [{\"_id\": 0, \"text\": {\"content\": \"\", \"label_intervals\": []}, \"is_main_or_branch\": \"main\", \"branch_from\": \"living room\", \"branch_from_id\": 0, \"branch_condition\": null, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 0, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"living room\"}]}, {\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}, {\"_id\": 2, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}, {\"_id\": 3, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"kitchen\"}]}, {\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}, {\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 1, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}]}, {\"_id\": 2, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 2, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}]}]}}}}, {\"_id\": 1, \"text\": {\"content\": \"\", \"label_intervals\": []}, \"is_main_or_branch\": \"branch\", \"branch_from\": \"kitchen\", \"branch_from_id\": 3, \"branch_condition\": null, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 3, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"kitchen\"}]}, {\"_id\": 4, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"garage\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 4, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 4, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"garage\"}]}]}]}}}}, {\"_id\": 2, \"text\": {\"content\": \"\", \"label_intervals\": []}, \"is_main_or_branch\": \"branch\", \"branch_from\": \"bedroom\", \"branch_from_id\": 2, \"branch_condition\": null, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 2, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}, {\"_id\": 2, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 2, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 2, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}]}]}}}}, {\"_id\": 3, \"text\": {\"content\": \"\", \"label_intervals\": []}, \"is_main_or_branch\": \"branch\", \"branch_from\": \"office\", \"branch_from_id\": 1, \"branch_condition\": null, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"office\"}]}, {\"_id\": 5, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bathroom\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 5, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 5, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bathroom\"}]}]}]}}}}, {\"_id\": 4, \"text\": {\"content\": \"\", \"label_intervals\": []}, \"is_main_or_branch\": \"branch\", \"branch_from\": \"bathroom\", \"branch_from_id\": 5, \"branch_condition\": null, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 5, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bathroom\"}]}, {\"_id\": 6, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 6, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 6, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"bedroom\"}]}]}]}}}}]}}";
-        //su = JsonUtility.FromJson<SerializableUpdate>(jsontest);
-        //stateStorage.UpdateFromROS(su);
-        //ProcessRecordings(su.program);
-        // ProcessWorld(su.world);
-    }
+		// debug testing for displaying recordings
+		//string jsontest = "{\"world\": {\"regions\": [{\"name\": \"garage\", \"objects\": []}, {\"name\": \"living room\", \"objects\": []}, {\"name\": \"kitchen\", \"objects\": []}, {\"name\": \"hallway\", \"objects\": []}, {\"name\": \"office\", \"objects\": []}, {\"name\": \"bathroom\", \"objects\": []}, {\"name\": \"bedroom\", \"objects\": []}]}, \"program\": {\"recordings\": [{\"_id\": 0, \"text\": {\"content\": \"when I approach\", \"label_intervals\": []}, \"is_main_or_branch\": \"main\", \"branch_from\": \"living room\", \"branch_from_id\": 0, \"branch_condition\": {\"_id\": -1, \"cmd\": \"when_approach\", \"_type\": \"trigger\", \"args\": []}, \"sketch\": {\"user_sequence\": {\"data\": [{\"_id\": 0, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"living room\"}]}, {\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"garage\"}]}], \"plan\": {\"waypoints\": [{\"_id\": 1, \"x\": 1, \"y\": 1, \"task_subsequence\": [{\"_id\": 1, \"cmd\": \"moveTo\", \"_type\": \"command\", \"args\": [{\"argname\": \"destination\", \"argval\": \"garage\"}]}, {\"_id\": -1, \"cmd\": \"when_approach\", \"_type\": \"trigger\", \"args\": []}]}]}}}}]}}";
+		//su = JsonUtility.FromJson<SerializableUpdate>(jsontest);
+		//stateStorage.UpdateFromROS(su);
+		//ProcessRecordings(su.program);
+		// ProcessWorld(su.world);
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -350,7 +350,14 @@ public class RosNode : MonoBehaviour
 			// check if there's a trigger, we print it as a special case
 			if (!(program.recordings[i].branch_condition.cmd is null))
 			{
-				steps.Add("Trigger: " + program.recordings[i].branch_condition.cmd + " " + program.recordings[i].branch_condition.args[0].argval);
+				if (program.recordings[i].branch_condition.args.Length > 0)
+				{
+					steps.Add("Trigger: " + program.recordings[i].branch_condition.cmd + " " + program.recordings[i].branch_condition.args[0].argval);
+				}
+				else
+				{
+					steps.Add("Trigger: " + program.recordings[i].branch_condition.cmd);
+				}
 			}
 
 			// check if it's a branch, we handle it as a special case
