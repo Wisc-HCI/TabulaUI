@@ -24,6 +24,11 @@ public class Menu : MonoBehaviour
     public Sprite stopRecordingSprite;
 
     /*
+     * Track if map was loaded, to know what regions to load
+     */
+    public Boolean map_loaded;
+
+    /*
      * MAIN MENU
      * At the top of the screen
      */
@@ -153,6 +158,7 @@ public class Menu : MonoBehaviour
         loadButton.onClick.AddListener(Load);
         saveButton = GameObject.Find("Save").GetComponent<Button>();
         saveButton.onClick.AddListener(Save);
+        map_loaded = false;
 
         /*
          * MAIN MENU
@@ -298,7 +304,9 @@ public class Menu : MonoBehaviour
 
     void LoadMap()
     {
-        ros.SendMapRequest();
+        //ros.SendMapRequest();
+        ros.LoadStoreMap();
+        map_loaded = true;
     }
 
     void Save()
@@ -325,6 +333,10 @@ public class Menu : MonoBehaviour
         //StreamReader reader = new StreamReader(path);
         //string jsonString = reader.ReadToEnd();
         TextAsset regText = Resources.Load<TextAsset>("regions_default");
+        if (map_loaded)
+        {
+            regText = Resources.Load<TextAsset>("regions_user_study_store");
+        }
         string jsonString = regText.text;
         Debug.Log(jsonString);
         //reader.Close();

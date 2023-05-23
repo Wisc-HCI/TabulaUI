@@ -261,7 +261,12 @@ public class RosNode : MonoBehaviour
 		writer.Close();
 
 		backgroundMapDrawer.LoadMap(ml);
-	} 
+	}
+
+	public void LoadStoreMap()
+	{
+		backgroundMapDrawer.LoadMap("store_map");
+	}
 
 	void OnUpdateReceived(UpdateMsg msg)
     {
