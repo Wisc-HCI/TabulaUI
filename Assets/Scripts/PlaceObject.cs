@@ -48,7 +48,7 @@ public class PlaceObject : MonoBehaviour
                 if (currModeState.GetPlaceMode() == ModeState.PlaceMode.Groceries && !IsPointerOverBlockingObject()){
                     // Instantiate(groceries, mousePos, Quaternion.identity);
                     ObjectInWorld oiw = AddObject("groceries", mousePos, Quaternion.identity);
-                    objects.ManuallyAddObject(oiw);
+                    //objects.ManuallyAddObject(oiw);
                     currModeState.SetPlaceMode(ModeState.PlaceMode.None);
                     currModeState.SetObjectMode(ModeState.ObjectMode.NotAdding);
                     menu.AddTogglerOnClick();
@@ -56,7 +56,7 @@ public class PlaceObject : MonoBehaviour
                 else if (currModeState.GetPlaceMode() == ModeState.PlaceMode.Person && !IsPointerOverBlockingObject()){
                     // Instantiate(person, mousePos, Quaternion.identity);
                     ObjectInWorld oiw = AddObject("person", mousePos, Quaternion.identity);
-                    objects.ManuallyAddObject(oiw);
+                    //objects.ManuallyAddObject(oiw);
                     currModeState.SetPlaceMode(ModeState.PlaceMode.None);
                     currModeState.SetObjectMode(ModeState.ObjectMode.NotAdding);
                     menu.AddTogglerOnClick();
@@ -64,7 +64,7 @@ public class PlaceObject : MonoBehaviour
                 else if (currModeState.GetPlaceMode() == ModeState.PlaceMode.Cabinets && !IsPointerOverBlockingObject()){
                     // Instantiate(person, mousePos, Quaternion.identity);
                     ObjectInWorld oiw = AddObject("cabinets", mousePos, Quaternion.identity);
-                    objects.ManuallyAddObject(oiw);
+                    //objects.ManuallyAddObject(oiw);
                     currModeState.SetPlaceMode(ModeState.PlaceMode.None);
                     currModeState.SetObjectMode(ModeState.ObjectMode.NotAdding);
                     menu.AddTogglerOnClick();
@@ -73,7 +73,7 @@ public class PlaceObject : MonoBehaviour
                 {
                     // Instantiate(person, mousePos, Quaternion.identity);
                     ObjectInWorld oiw = AddObject("toy", mousePos, Quaternion.identity);
-                    objects.ManuallyAddObject(oiw);
+                    //objects.ManuallyAddObject(oiw);
                     currModeState.SetPlaceMode(ModeState.PlaceMode.None);
                     currModeState.SetObjectMode(ModeState.ObjectMode.NotAdding);
                     menu.AddTogglerOnClick();
@@ -82,7 +82,7 @@ public class PlaceObject : MonoBehaviour
                 {
                     // Instantiate(person, mousePos, Quaternion.identity);
                     ObjectInWorld oiw = AddObject("chest", mousePos, Quaternion.identity);
-                    objects.ManuallyAddObject(oiw);
+                    //objects.ManuallyAddObject(oiw);
                     currModeState.SetPlaceMode(ModeState.PlaceMode.None);
                     currModeState.SetObjectMode(ModeState.ObjectMode.NotAdding);
                     menu.AddTogglerOnClick();

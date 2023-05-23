@@ -68,6 +68,7 @@ public class DragObject : MonoBehaviour
                 dragging = false;
                 if (IsPointerOverTrash() && collider.OverlapPoint(mousePos))
                 {
+		    Debug.Log("Should remove " + this.name);
                     objects.RemoveObjectInWorld(this.name);
                 }
             }
@@ -106,7 +107,7 @@ public class DragObject : MonoBehaviour
                 //                                                   || results[i].gameObject.name.Contains("Program Mode") 
                 //                                                   || results[i].gameObject.name.Contains("Mode Toggler"))
                 {
-                    return true;
+		    return true;
                 }
             }
         }
